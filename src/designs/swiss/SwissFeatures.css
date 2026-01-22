@@ -1,0 +1,102 @@
+/* Swiss Features */
+.swiss-features {
+    background: #F2F2F2;
+    color: #111;
+    position: relative;
+    border-bottom: 1px solid #111;
+}
+
+.swiss-features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(300px, auto));
+    position: relative;
+    z-index: 2;
+}
+
+.swiss-feature-block {
+    padding: 3rem;
+    border-right: 1px solid #111;
+    border-bottom: 1px solid #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.swiss-feature-block.header {
+    grid-column: span 1;
+    grid-row: span 2;
+    background: #111;
+    color: white;
+    justify-content: center;
+}
+
+.swiss-feature-block.header h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: 800;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+}
+
+.swiss-feature-block.f1 {
+    grid-column: span 1;
+}
+
+.swiss-feature-block.f2 {
+    grid-column: span 1;
+}
+
+.swiss-feature-block.f3 {
+    grid-column: span 1;
+    background: #FF3B30;
+    color: white;
+    justify-content: center;
+    border-right: none;
+}
+
+.swiss-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.swiss-feature-block h3 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.swiss-feature-block p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    max-width: 200px;
+}
+
+@media (max-width: 1024px) {
+    .swiss-features-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .swiss-feature-block.header {
+        grid-column: span 1;
+        grid-row: span 1;
+        padding: 4rem;
+    }
+
+    .swiss-feature-block.header h2 {
+        transform: rotate(0);
+        text-align: center;
+    }
+
+    .swiss-feature-block {
+        border-right: none;
+    }
+}

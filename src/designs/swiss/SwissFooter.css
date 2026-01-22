@@ -1,0 +1,48 @@
+/* Swiss Footer */
+.swiss-footer {
+    background: #F2F2F2;
+    color: #111;
+    padding: 4rem 0;
+}
+
+.swiss-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #111;
+    padding-top: 2rem;
+}
+
+.swiss-footer .col {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.brand h3 {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.col.social a {
+    text-decoration: none;
+    color: #111;
+    margin-bottom: 0.5rem;
+}
+
+.col.social a:hover {
+    color: #FF3B30;
+}
+
+@media (max-width: 768px) {
+    .swiss-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+}

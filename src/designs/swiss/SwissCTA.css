@@ -1,0 +1,63 @@
+/* Swiss CTA */
+.swiss-cta {
+    background: #111;
+    color: white;
+    padding: 8rem 0;
+}
+
+.swiss-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.swiss-cta-left {
+    flex: 1;
+    padding: 4rem;
+    border-right: 1px solid white;
+}
+
+.swiss-cta-left h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 0.9;
+}
+
+.swiss-cta-right {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.swiss-cta-right p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 300px;
+}
+
+.swiss-cta-link {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.25rem;
+    color: #FF3B30;
+    /* Swiss Red */
+    text-decoration: none;
+    font-weight: 700;
+    align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+    .swiss-cta-container {
+        flex-direction: column;
+    }
+
+    .swiss-cta-left {
+        border-right: none;
+        border-bottom: 1px solid white;
+    }
+}

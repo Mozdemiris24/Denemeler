@@ -1,0 +1,73 @@
+/* Retro CTA */
+.retro-cta {
+    background: #240046;
+    padding: 8rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.retro-cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.retro-cta h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 3rem;
+    color: #ffea00;
+    text-shadow: 4px 4px 0px #ff0099;
+    letter-spacing: 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.retro-btn-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.retro-start-btn {
+    background: transparent;
+    border: 4px solid #00f3ff;
+    color: #00f3ff;
+    font-family: 'Russo One', sans-serif;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px #00f3ff, inset 0 0 20px #00f3ff;
+    text-shadow: 0 0 10px #00f3ff;
+    transition: all 0.2s;
+}
+
+.retro-start-btn:hover {
+    background: #00f3ff;
+    color: #10002b;
+    box-shadow: 0 0 50px #00f3ff;
+}
+
+.retro-arrow {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff0099;
+    font-size: 2rem;
+    animation: arrowMove 1s infinite alternate;
+}
+
+@keyframes arrowMove {
+    from {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    to {
+        transform: translateY(-50%) translateX(-10px);
+    }
+}

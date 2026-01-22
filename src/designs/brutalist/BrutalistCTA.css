@@ -1,0 +1,238 @@
+/* Brutalist CTA Styles */
+.brutalist-cta {
+    background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 50%, #0a0a0a 100%);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.brutalist-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(0, 255, 159, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(255, 184, 0, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.cta-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* ASCII Decoration */
+.ascii-decoration {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #222;
+    user-select: none;
+}
+
+.ascii-decoration.left {
+    color: rgba(0, 255, 159, 0.2);
+}
+
+.ascii-decoration.right {
+    color: rgba(255, 184, 0, 0.2);
+}
+
+/* Content */
+.cta-content {
+    text-align: center;
+    flex: 1;
+}
+
+.cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 184, 0, 0.1);
+    border: 1px solid rgba(255, 184, 0, 0.3);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #ffb800;
+    margin-bottom: 2rem;
+}
+
+.cta-title {
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.title-line {
+    display: block;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    color: #888;
+}
+
+.title-highlight {
+    display: block;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #00ff9f;
+    margin: 0.25rem 0;
+}
+
+/* Terminal */
+.cta-terminal {
+    max-width: 550px;
+    margin: 0 auto 2rem;
+    padding: 1rem 1.5rem;
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    text-align: left;
+}
+
+.terminal-line {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.prompt {
+    color: #00ff9f;
+    font-weight: 700;
+}
+
+.cmd {
+    color: #ffb800;
+}
+
+.terminal-output {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    padding-left: 20px;
+}
+
+.success {
+    color: #00ff9f;
+}
+
+/* Buttons */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.btn-brutalist {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-brutalist.btn-primary {
+    background: #00ff9f;
+    color: #0a0a0a;
+    border-color: #00ff9f;
+}
+
+.btn-brutalist.btn-primary:hover {
+    background: transparent;
+    color: #00ff9f;
+    box-shadow: 0 0 30px rgba(0, 255, 159, 0.3);
+}
+
+.btn-brutalist.btn-outline {
+    background: transparent;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.btn-brutalist.btn-outline:hover {
+    border-color: #ffb800;
+    color: #ffb800;
+}
+
+.btn-icon {
+    font-size: 1rem;
+}
+
+/* Stats */
+.cta-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-icon {
+    font-size: 1.25rem;
+}
+
+.stat-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #00ff9f;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.stat-divider {
+    font-family: 'JetBrains Mono', monospace;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ascii-decoration {
+        display: none;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn-brutalist {
+        justify-content: center;
+    }
+
+    .cta-stats {
+        flex-wrap: wrap;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+}

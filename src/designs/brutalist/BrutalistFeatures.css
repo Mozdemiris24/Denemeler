@@ -1,0 +1,234 @@
+/* Brutalist Features Styles */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+.brutalist-features {
+    background: #0a0a0a;
+    padding: 6rem 0;
+    position: relative;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.brutalist-features::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 255, 159, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 159, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.features-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+.features-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(0, 255, 159, 0.1);
+    border: 1px solid rgba(0, 255, 159, 0.3);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #00ff9f;
+    margin-bottom: 1.5rem;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff9f;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.header-title {
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 1rem;
+}
+
+.title-main {
+    display: block;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.title-accent {
+    display: block;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #00ff9f;
+}
+
+.header-description {
+    font-size: 1.125rem;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Feature Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Feature Card */
+.brutalist-feature-card {
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.brutalist-feature-card:hover {
+    background: #161616;
+}
+
+.card-terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #1a1a1a;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.terminal-dot {
+    width: 10px;
+    height: 10px;
+    background: #00ff9f;
+    border-radius: 50%;
+}
+
+.terminal-cmd {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #ffb800;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.card-description {
+    font-size: 0.9375rem;
+    color: #888;
+    line-height: 1.6;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-top: 1px solid #2a2a2a;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+}
+
+.prompt {
+    color: #00ff9f;
+    font-weight: 700;
+}
+
+.run-cmd {
+    color: #666;
+}
+
+.arrow {
+    margin-left: auto;
+    color: #444;
+    transition: all 0.3s ease;
+}
+
+.brutalist-feature-card:hover .arrow {
+    color: #00ff9f;
+    transform: translateX(5px);
+}
+
+/* Terminal Output */
+.terminal-output {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+}
+
+.output-line {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.cmd {
+    color: #ffb800;
+}
+
+.output-result {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    padding-left: 20px;
+}
+
+.success {
+    color: #00ff9f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .brutalist-features {
+        padding: 4rem 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}

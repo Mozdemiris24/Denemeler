@@ -1,0 +1,124 @@
+/* Retro Features */
+.retro-features {
+    background: #10002b;
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+}
+
+.retro-grid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 243, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 0;
+}
+
+.retro-features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.retro-title-glitch {
+    font-family: 'Russo One', sans-serif;
+    font-size: 4rem;
+    color: white;
+    position: relative;
+    margin-bottom: 5rem;
+    text-shadow: 2px 2px 0px #ff0099, -2px -2px 0px #00f3ff;
+}
+
+.retro-deck {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.retro-card {
+    background: rgba(16, 0, 43, 0.8);
+    border: 2px solid;
+    padding: 2rem;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.retro-card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.retro-card.cyan {
+    border-color: #00f3ff;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+.retro-card.pink {
+    border-color: #ff0099;
+    box-shadow: 0 0 15px rgba(255, 0, 153, 0.3);
+}
+
+.retro-card.purple {
+    border-color: #9d4edd;
+    box-shadow: 0 0 15px rgba(157, 78, 221, 0.3);
+}
+
+.retro-card h3 {
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.retro-card p {
+    font-family: 'Share Tech Mono', monospace;
+    color: #dfdfdf;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.retro-stats {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 0.5rem;
+    opacity: 0.8;
+}
+
+.retro-card.cyan .retro-stats {
+    color: #00f3ff;
+}
+
+.retro-card.pink .retro-stats {
+    color: #ff0099;
+}
+
+.retro-card.purple .retro-stats {
+    color: #9d4edd;
+}
+
+.scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    opacity: 0.3;
+}

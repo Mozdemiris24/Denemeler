@@ -1,0 +1,297 @@
+/* Neo-Brutalist Pop Design */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap');
+
+.neo-hero {
+    position: relative;
+    min-height: 100vh;
+    background: #E0E7FF;
+    /* Light Periwinkle */
+    font-family: 'Space Grotesk', sans-serif;
+    overflow: hidden;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+}
+
+/* Background Pattern */
+.neo-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(#A45EE5 2px, transparent 2px);
+    background-size: 30px 30px;
+    opacity: 0.3;
+}
+
+.neo-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 2rem 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Marquee */
+.neo-marquee-container {
+    position: absolute;
+    top: 15%;
+    left: -10%;
+    width: 120%;
+    transform: rotate(-5deg);
+    background: #1a1a1a;
+    padding: 1rem 0;
+    border-top: 4px solid #1a1a1a;
+    border-bottom: 4px solid #1a1a1a;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.neo-marquee {
+    display: flex;
+    white-space: nowrap;
+    color: #FFD02F;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.neo-marquee span {
+    padding-right: 2rem;
+}
+
+/* Content */
+.neo-content {
+    background: white;
+    border: 4px solid #1a1a1a;
+    box-shadow: 12px 12px 0px #1a1a1a;
+    padding: 3rem;
+    position: relative;
+    z-index: 3;
+}
+
+.neo-badge {
+    display: inline-block;
+    background: #A45EE5;
+    color: white;
+    padding: 8px 16px;
+    font-weight: 700;
+    border: 3px solid #1a1a1a;
+    margin-bottom: 1.5rem;
+    transform: rotate(-2deg);
+}
+
+.neo-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 0.9;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.block-reveal {
+    display: block;
+}
+
+.highlight-yellow {
+    background: #FFD02F;
+    padding: 0 10px;
+    border: 3px solid #1a1a1a;
+    display: inline-block;
+    transform: rotate(1deg);
+    box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+.neo-description {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    background: white;
+}
+
+/* Buttons */
+.neo-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.neo-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-weight: 700;
+    border: 3px solid #1a1a1a;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: #FFD02F;
+    color: #1a1a1a;
+    box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+.btn-secondary {
+    background: white;
+    color: #1a1a1a;
+    box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+/* Visuals */
+.neo-visual {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.neo-card {
+    background: white;
+    border: 4px solid #1a1a1a;
+    box-shadow: 16px 16px 0px #A45EE5;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1;
+}
+
+.card-header {
+    background: #1a1a1a;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Space Grotesk', monospace;
+}
+
+.traffic-lights {
+    display: flex;
+    gap: 8px;
+}
+
+.light {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.light.red {
+    background: #FF6B6B;
+}
+
+.light.yellow {
+    background: #FFD02F;
+}
+
+.light.green {
+    background: #4ADE80;
+}
+
+.card-body {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.neo-stat {
+    border: 3px solid #1a1a1a;
+    padding: 1.5rem;
+    background: #FFD02F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 6px 6px 0px #1a1a1a;
+    transform: rotate(-2deg);
+}
+
+.neo-stat .label {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.neo-stat .value {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'Syne', sans-serif;
+}
+
+.neo-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    height: 150px;
+    padding-bottom: 20px;
+}
+
+.bar {
+    flex: 1;
+    background: #1a1a1a;
+    border: 2px solid #1a1a1a;
+}
+
+.bar.highlight {
+    background: #A45EE5;
+    border-color: #1a1a1a;
+}
+
+.neo-float-box {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border: 3px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 6px 6px 0px #1a1a1a;
+}
+
+.box-1 {
+    top: -40px;
+    right: 20px;
+    background: #4ADE80;
+}
+
+.box-2 {
+    bottom: 20px;
+    left: -20px;
+    background: #FF6B6B;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .neo-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    .neo-content {
+        margin: 0 auto;
+        box-shadow: 8px 8px 0px #1a1a1a;
+    }
+
+    .neo-buttons {
+        justify-content: center;
+    }
+
+    .neo-visual {
+        margin-top: 2rem;
+    }
+
+    .neo-marquee-container {
+        top: 5%;
+    }
+}

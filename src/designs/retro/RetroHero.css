@@ -1,0 +1,241 @@
+/* Retro Synthwave Design */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Share+Tech+Mono&display=swap');
+
+.retro-hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #240046 0%, #10002b 100%);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Share Tech Mono', monospace;
+    z-index: 1;
+}
+
+/* Retro Sun */
+.retro-sun {
+    position: absolute;
+    top: 15%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ffea00 0%, #ff0099 50%, #240046 51%, #240046 55%, #ff0099 56%, #ff0099 100%);
+    box-shadow: 0 0 60px #ff0099, 0 0 100px #ff0099;
+    z-index: 1;
+}
+
+/* Grid Floor */
+.retro-grid {
+    position: absolute;
+    bottom: -30%;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(60deg);
+    z-index: 2;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+}
+
+.grid-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(0, 243, 255, 0.4) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.4) 2px, transparent 2px);
+    background-size: 80px 80px;
+    animation: gridMove 4s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(80px);
+    }
+}
+
+/* Mountains */
+.retro-mountains {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background:
+        linear-gradient(to top, #10002b 0%, transparent 100%),
+        repeating-linear-gradient(90deg, #10002b 0px, transparent 1px, #10002b 2px);
+    z-index: 2;
+    clip-path: polygon(0% 100%, 0% 80%, 10% 40%, 20% 70%, 30% 30%, 40% 60%, 50% 20%, 60% 55%, 70% 35%, 80% 65%, 90% 45%, 100% 90%, 100% 100%);
+    opacity: 0.8;
+}
+
+/* Content */
+.retro-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.retro-glitch-text {
+    font-family: 'Russo One', sans-serif;
+    font-size: clamp(4rem, 8vw, 8rem);
+    color: white;
+    text-shadow:
+        4px 4px 0px #ff0099,
+        -4px -4px 0px #00f3ff;
+    position: relative;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+}
+
+.retro-subtitle {
+    font-size: 2rem;
+    color: #ff0099;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px #ff0099;
+}
+
+.neon-cyan {
+    color: #00f3ff;
+    text-shadow: 0 0 10px #00f3ff;
+}
+
+.retro-description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #dfdfdf;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Actions */
+.retro-actions {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.btn-retro {
+    position: relative;
+    padding: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    transition: all 0.2s ease;
+}
+
+.btn-retro span {
+    display: block;
+    padding: 16px 32px;
+    background: rgba(16, 0, 43, 0.9);
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.btn-cyan {
+    background: #00f3ff;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+}
+
+.btn-cyan span {
+    color: #00f3ff;
+}
+
+.btn-cyan:hover {
+    box-shadow: 0 0 40px rgba(0, 243, 255, 0.8);
+    transform: scale(1.05);
+}
+
+.btn-cyan:hover span {
+    background: rgba(0, 243, 255, 0.1);
+    color: white;
+}
+
+.btn-pink {
+    background: #ff0099;
+    box-shadow: 0 0 20px rgba(255, 0, 153, 0.5);
+}
+
+.btn-pink span {
+    color: #ff0099;
+}
+
+.btn-pink:hover {
+    box-shadow: 0 0 40px rgba(255, 0, 153, 0.8);
+    transform: scale(1.05);
+}
+
+/* Stats Bar */
+.retro-stats-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(16, 0, 43, 0.8);
+    border: 1px solid #00f3ff;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.retro-label {
+    font-size: 0.75rem;
+    color: #ff0099;
+    margin-bottom: 4px;
+}
+
+.retro-value {
+    font-size: 1.5rem;
+    color: #00f3ff;
+    text-shadow: 0 0 5px #00f3ff;
+}
+
+.stat-separator {
+    width: 2px;
+    height: 30px;
+    background: #ff0099;
+    box-shadow: 0 0 5px #ff0099;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .retro-glitch-text {
+        font-size: 3rem;
+    }
+
+    .retro-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .retro-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .retro-stats-bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .stat-separator {
+        width: 100%;
+        height: 1px;
+    }
+}

@@ -1,0 +1,73 @@
+/* Glass CTA */
+.glass-cta {
+    padding: 6rem 1rem;
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.glass-cta-card {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    padding: 5rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+.glass-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(112, 0, 255, 0.4) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.glass-cta-card h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.glass-cta-card p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-glass-cta {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #00C2FF, #7000FF);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 99px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(112, 0, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-glass-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(112, 0, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .glass-cta-card h2 {
+        font-size: 2rem;
+    }
+}

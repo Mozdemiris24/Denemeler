@@ -1,0 +1,48 @@
+/* Cyber CTA */
+.cyber-cta {
+    background: #000;
+    padding: 8rem 0;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 1px solid #0F0;
+}
+
+.scrolling-text {
+    font-family: 'VT323', monospace;
+    font-size: 8rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #0F0;
+    white-space: nowrap;
+    animation: scrollText 10s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.cyber-btn-group button {
+    background: #000;
+    color: #0F0;
+    border: 2px solid #0F0;
+    font-family: 'VT323', monospace;
+    font-size: 3rem;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    margin-top: -4rem;
+    /* overlaps text */
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.4);
+}
+
+.cyber-btn-group button:hover {
+    background: #0F0;
+    color: #000;
+}

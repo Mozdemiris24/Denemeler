@@ -1,0 +1,52 @@
+/* Retro Footer */
+.retro-footer {
+    background: #000;
+    color: #00f3ff;
+    padding: 4rem 0;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    border-top: 2px solid #ff0099;
+    box-shadow: 0 -10px 20px rgba(255, 0, 153, 0.2);
+}
+
+.retro-scanlines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(to bottom, transparent 0px, transparent 2px, rgba(0, 0, 0, 0.5) 3px);
+    pointer-events: none;
+}
+
+.retro-logo {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2rem;
+    color: #ff0099;
+    text-shadow: 2px 2px 0px #00f3ff;
+    margin-bottom: 2rem;
+}
+
+.retro-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.retro-links a {
+    color: #00f3ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+}
+
+.retro-links a:hover {
+    color: #ffea00;
+    text-shadow: 0 0 10px #ffea00;
+}
+
+.retro-copy {
+    color: #ec4899;
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}

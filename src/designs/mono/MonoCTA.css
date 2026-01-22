@@ -1,0 +1,44 @@
+/* Monochrome CTA */
+.mono-cta {
+    background: #000;
+    color: #fff;
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.mono-cta-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.mono-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-style: italic;
+    margin-bottom: 4rem;
+    font-weight: 400;
+}
+
+.mono-btn {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 0.875rem;
+    border: 1px solid #fff;
+    padding: 20px 40px;
+    transition: all 0.3s;
+}
+
+.mono-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .mono-cta h2 {
+        font-size: 2.5rem;
+    }
+}

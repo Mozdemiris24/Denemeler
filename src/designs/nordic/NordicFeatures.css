@@ -1,0 +1,102 @@
+/* Nordic Features */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500&display=swap');
+
+.nordic-features {
+    background: #F5F2EB;
+    /* Warm beige similar to hero */
+    padding: 8rem 0;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #2C3E50;
+    position: relative;
+}
+
+.nordic-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nordic-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.nordic-overhead {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8B7355;
+    margin-bottom: 1rem;
+}
+
+.nordic-title {
+    font-family: 'Newsreader', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.nordic-subtitle {
+    font-family: 'Newsreader', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #666;
+}
+
+.nordic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.nordic-card {
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+    transition: transform 0.4s ease;
+}
+
+.nordic-card:hover {
+    transform: translateY(-5px);
+}
+
+.nordic-card-num {
+    display: block;
+    font-family: 'Newsreader', serif;
+    font-size: 2rem;
+    color: #C2B299;
+    margin-bottom: 1rem;
+}
+
+.nordic-card h3 {
+    font-family: 'Newsreader', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.nordic-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.nordic-line {
+    width: 40px;
+    height: 1px;
+    background: #8B7355;
+    transition: width 0.3s ease;
+}
+
+.nordic-card:hover .nordic-line {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .nordic-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,55 @@
+/* Glass Footer */
+.glass-footer {
+    background: #000;
+    color: white;
+    padding: 4rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.glass-footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.glass-footer-logo .accent {
+    background: linear-gradient(to right, #00C2FF, #7000FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glass-footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.glass-footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.glass-footer-links a:hover {
+    color: white;
+}
+
+.glass-footer-copy {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .glass-footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+}

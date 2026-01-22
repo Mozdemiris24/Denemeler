@@ -1,0 +1,129 @@
+/* Neo Features */
+.neo-features {
+    background: #E0E7FF;
+    /* Light indigo background */
+    padding: 0 0 8rem 0;
+    border-top: 4px solid #000;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.neo-marquee-strip {
+    background: #000;
+    color: #FFD600;
+    padding: 1rem 0;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-bottom: 4px solid #000;
+    margin-bottom: 6rem;
+}
+
+.neo-marquee-strip .track {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.neo-section-title {
+    font-size: 5rem;
+    line-height: 0.9;
+    font-weight: 900;
+    margin-bottom: 4rem;
+    text-shadow: 4px 4px 0px #000;
+    -webkit-text-stroke: 2px #000;
+    color: #fff;
+    transform: rotate(-2deg);
+}
+
+.neo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.neo-feature-card {
+    border: 4px solid #000;
+    padding: 2rem;
+    box-shadow: 12px 12px 0px #000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.neo-feature-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 16px 16px 0px #000;
+}
+
+.bg-yellow {
+    background: #FFD600;
+}
+
+.bg-purple {
+    background: #C084FC;
+}
+
+.bg-green {
+    background: #4ADE80;
+}
+
+.bg-pink {
+    background: #F472B6;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 1rem;
+}
+
+.icon-circle {
+    background: #000;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.card-id {
+    font-weight: 700;
+    font-family: 'Syne', sans-serif;
+}
+
+.neo-feature-card h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.neo-feature-card p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .neo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .neo-section-title {
+        font-size: 3rem;
+    }
+}
